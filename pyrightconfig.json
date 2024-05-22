@@ -1,0 +1,16 @@
+{
+    "include": [
+      "bin"
+    ],
+    
+    "exclude": [
+      "fastq",
+      "processed",
+      "annotations",
+      "analysis",
+      "submission",
+      "metadata",
+      "**/__pycache__",
+      "ref"
+    ],
+}

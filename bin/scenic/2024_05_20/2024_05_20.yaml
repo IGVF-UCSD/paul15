@@ -1,0 +1,15 @@
+# Configuration file for SCENIC
+input_loc: /cellar/users/aklie/data/datasets/paul15/annotated/Paul_etal_15.h5mu  # path to the input data
+outdir: /cellar/users/aklie/data/datasets/paul15/analysis/scenic/2024_05_20  # created if doesn't exist
+scratchdir: /cellar/users/aklie/tmp/gene_program_evaluation  # should exist
+singularity_image: /cellar/users/aklie/opt/gene_program_evaluation/src/inference/grn_models/scenic/envs/scenic.sif  # optional
+n_jobs: 4  # threads
+random_state: 1234  # random state
+
+# Method params
+num_runs: 10
+layer: "raw_count"
+tf_list: /cellar/users/aklie/opt/gene_program_evaluation/src/inference/grn_models/scenic/resources/tf_lists/allTFs_mm.txt
+inference_method: "grnboost2"
+rankings_db: /cellar/users/aklie/opt/gene_program_evaluation/src/inference/grn_models/scenic/resources/rankings_db/mm10_10kbp_up_10kbp_down_full_tx_v10_clust.genes_vs_motifs.rankings.feather
+motif_annotations: /cellar/users/aklie/opt/gene_program_evaluation/src/inference/grn_models/scenic/resources/motif_annotations/motifs-v10nr_clust-nr.mgi-m0.001-o0.0.tbl
